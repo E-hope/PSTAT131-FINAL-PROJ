@@ -1,0 +1,28 @@
+Variable Codebook
+
+playoff_bound : binary outcome variable that indicates whether or not a
+	team met the 0.525 winning percentage threshold to be a strong playoff
+	team contender.
+
+b_bb_rate : the rate at which the team draws/collects walks
+
+era : stands for Earned Run Average and is the average amount of runs a team
+	surrenders per game
+
+b_k_rate : the rate at which a team strikesout on offense
+
+w_oba : stands for Weighted On-Base Percentage and is rate at which a team gets
+	on base with the addition of appliying the appropriate 'weights' to each
+	hit outcome
+
+bb_9 : rate at which a team surrenders walks per 9 innings
+
+k_9 : rate at which a team collects strikeouts while on defense
+
+drs : stands for Defensive Runs Saved and is simply the approximated amount
+	runs a team's defense saves or surrenders per season.
+
+frm : rating given to catchers on the team that indicates how well a catcher
+	can convince the umpire into calling a strike
+
+avg_age : the average age of the team
