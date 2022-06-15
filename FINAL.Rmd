@@ -31,7 +31,7 @@ tidymodels_prefer()
 ```
 
 
-One of the biggest appeals to baseball is the stats that many fans love to follow and study each season. My goal for this project is to import a custom data set and find lesser known relationships correlated to winning as well as to seek certain stats that are commonly believed to be strongly correlated with winning and possibly finding their 'true' worth. It is important to note that when it comes to stats in baseball, it is useful to have the variable code book handy as well as a source to the more formal definitions of the stats I utilize in my models. To further simplify this, the typical threshold at which a team's winning percentage should be in order to have a strong chance at making playoffs is about 0.525. This allows to work with a simple 'True or False' response variable. Lets begin by reading in the data set.
+My goal for this project is to import a custom data set and explore lesser known relationships to winning as well as to seek certain stats that are 'commonly' believed to be strongly correlated with winning and possibly finding their 'true' worth. It is important to note that when it comes to stats in baseball, it is useful to have the variable code book handy as well as a source to the more formal definitions of the stats I utilize in my models. To further simplify this, the typical threshold at which a team's winning percentage should be in order to have a strong chance at making playoffs is about 0.525 (85 regular season wins in a 162-game season). This allows to work with a simple 'True or False' response variable. Lets begin by reading in the data set.
 
 ```{r}
 # reading in the data 
@@ -298,6 +298,7 @@ MODEL FITTING WITH 10-FOLD CROSS VALIDATION
 
 Now that we have a recipe ready and to undergo cross validation, we will fit 4 models. Logistic, LDA, QDA, and Naive-Bayes. I will set up their workflows and engines as well as calculate their metrics. I will summarize my findings below.
 
+I will also tune the parameters for each model by using 'fit_resamples'.
 
 LOGISTIC REGRESSION
 ```{r}
@@ -465,4 +466,4 @@ The correlations at the beginning caught my attention right off the bat, no pun 
 
 After testing 4 different models, I found that my logistic model worked the best out of the 4. This makes sense as our response variable held only 2 possible values and was classified as a factor variable. I eventually made a prediction with my model and it correctly predicted that a team would make the playoffs given certain predictive stat values matching the criteria!
 
-There are many sub-routes anyone can take on this research. For example, I had to refrain from exploring one of these routes once I began investigating the relationships over time with fastball and cutter usage rates. As more and more data is gathered and as the game continues to evolve, I believe studying these trends are crucial for constructing a competitive team. Not only for team development, but also for individual player development. Though not mentioned in this project, newer information like spin rates and exit velocites can help propel these studies. 
+There are many sub-routes anyone can take on this research. For example, I had to refrain from exploring one of these routes once I began investigating the relationships over time with fastball and cutter usage rates. As more and more data is gathered and as the game continues to evolve, I believe studying these trends are crucial not only for team development and construction, but also for individual player development. Though not mentioned in this project, 'newer' information like spin rates and exit velocities can help propel these studies. 
